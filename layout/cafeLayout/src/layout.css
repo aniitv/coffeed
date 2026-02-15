@@ -1,0 +1,132 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+/* Global container */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f0e6, #d9c7b0); /* beige gradient */
+  font-family: "Poppins", sans-serif;
+  color: #4b2e2e;
+}
+
+/* Header */
+.header {
+  width: 100%; /* full width */
+  padding: 0 0; /* reduce vertical padding */
+  background: #4b2e2e;
+  color: #f5f0e6;
+  text-align: center;
+  font-size: 1.4rem; /* smaller font size */
+  font-weight: 300; /* thinner look */
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(75, 46, 46, 0.25);
+}
+/* Main content: cafes aligned left */
+/* Main content: cafes on the left, image on the right */
+.cafeList {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 2rem; /* space between cafes and right-side image */
+}
+
+/* Cafes list */
+.cafes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: auto;
+}
+
+/* Right-side image container */
+.rightImage {
+  flex-shrink: 0; /* prevent shrinking */
+  display: flex;
+  align-items: flex-start;
+}
+
+.rightImage img {
+  max-width: 850px; /* control size */
+  border-radius: 10px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(75, 46, 46, 0.25);
+}
+
+/* Cafe cards with liquid glass effect */
+.cafeCard {
+  display: flex; /* side-by-side layout */
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 0.6rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 8px rgba(75, 46, 46, 0.25);
+  transition: transform 0.2s ease;
+  width: 220px; /* fixed smaller width */
+}
+
+.cafeCard:hover {
+  transform: scale(1.02);
+}
+
+/* Image on the left */
+.cafeCard img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 0.8rem;
+}
+
+/* Text on the right */
+.cafeCard-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Name aligned left, bold/dark */
+.cafeCard h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500; /* stronger weight for name */
+  color: #4b2e2e; /* deep brown */
+  text-align: left;
+}
+
+/* Rating + category on one line, lighter */
+.cafeCard-meta {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 300; /* lighter weight */
+  color: #6b4f4f; /* softer brown */
+}
+
+/* Open/closed status */
+.cafeCard span.isOpen {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #3d2b2b;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+
+  text-align: center;
+  background: #4b2e2e;
+  color: #f5f0e6;
+  font-size: 0.85rem;
+  font-weight: 300; /* thinner look */
+  box-shadow: -3px -3px 6px rgba(75, 46, 46, 0.25);
+}
